@@ -1,46 +1,623 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Sharif Uddin | RF & Antenna Researcher</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #1f2937;
+            background: #ffffff;
+        }
+
+        /* Navigation */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #0f2747;
+            padding: 16px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 21px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #7dd3fc;
+        }
+
+        /* Main container */
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 25px;
+        }
+
+        /* Hero */
+
+        .hero {
+            min-height: 570px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            padding: 80px 0;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text .small-title {
+            color: #2563eb;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            line-height: 1.15;
+            color: #0f2747;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            font-weight: 500;
+            color: #475569;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #64748b;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .button-secondary {
+            border: 2px solid #2563eb;
+            color: #2563eb;
+        }
+
+        .button-secondary:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        /* Profile placeholder */
+
+        .profile {
+            width: 270px;
+            height: 270px;
+            border-radius: 50%;
+            background: #e2e8f0;
+            border: 8px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        /* Sections */
+
+        section {
+            padding: 85px 0;
+        }
+
+        section:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .section-title {
+            font-size: 34px;
+            color: #0f2747;
+            margin-bottom: 15px;
+        }
+
+        .section-line {
+            width: 55px;
+            height: 4px;
+            background: #2563eb;
+            margin-bottom: 35px;
+            border-radius: 5px;
+        }
+
+        .section-text {
+            max-width: 850px;
+            font-size: 17px;
+            color: #475569;
+        }
+
+        /* Research cards */
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 35px;
+        }
+
+        .research-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            transition: 0.3s;
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .research-card h3 {
+            color: #0f2747;
+            margin-bottom: 10px;
+        }
+
+        .research-card p {
+            color: #64748b;
+            font-size: 15px;
+        }
+
+        /* Publications */
+
+        .publication {
+            background: white;
+            border-left: 4px solid #2563eb;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .publication h3 {
+            color: #0f2747;
+            margin-bottom: 8px;
+        }
+
+        .publication p {
+            color: #64748b;
+        }
+
+        /* Contact */
+
+        .contact-box {
+            background: #0f2747;
+            color: white;
+            padding: 45px;
+            border-radius: 12px;
+        }
+
+        .contact-box h2 {
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            color: #dbeafe;
+            margin-bottom: 8px;
+        }
+
+        .contact-links {
+            margin-top: 20px;
+        }
+
+        .contact-links a {
+            color: #7dd3fc;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #081b33;
+            color: #94a3b8;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 800px) {
+
+            .nav-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile {
+                width: 210px;
+                height: 210px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Sharif Uddin</h1>
+    <!-- Navigation -->
 
-    <h2>RF, Microwave & Antenna Researcher</h2>
+    <nav>
+        <div class="nav-container">
 
-    <p>
-        Graduate Researcher at Washington State University Vancouver
-    </p>
+            <a href="#home" class="logo">
+                Sharif Uddin
+            </a>
 
-    <hr>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-    <h2>About Me</h2>
+        </div>
+    </nav>
 
-    <p>
-        I am a graduate student and researcher working in RF, microwave,
-        mmWave, and antenna engineering.
-    </p>
 
-    <h2>Research Interests</h2>
+    <!-- Hero -->
 
-    <ul>
-        <li>Antenna Design</li>
-        <li>Circularly Polarized Antennas</li>
-        <li>MIMO Antennas</li>
-        <li>Full-Duplex Communication</li>
-        <li>RF and Microwave Engineering</li>
-        <li>mmWave and Terahertz Systems</li>
-    </ul>
+    <main>
 
-    <h2>Contact</h2>
+        <section id="home">
 
-    <p>
-        Email: Your University Email
-    </p>
+            <div class="container">
+
+                <div class="hero">
+
+                    <div class="hero-text">
+
+                        <div class="small-title">
+                            RF • MICROWAVE • ANTENNA ENGINEERING
+                        </div>
+
+                        <h1>Sharif Uddin</h1>
+
+                        <h2>
+                            Graduate Researcher in RF & Antenna Engineering
+                        </h2>
+
+                        <p>
+                            Graduate student and researcher at Washington State
+                            University Vancouver, working on antenna design,
+                            circular polarization, MIMO, full-duplex communication,
+                            and RF/microwave systems.
+                        </p>
+
+                        <div class="buttons">
+
+                            <a href="#research" class="button button-primary">
+                                View My Research
+                            </a>
+
+                            <a href="#contact" class="button button-secondary">
+                                Contact Me
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile">
+                        <span>Your Photo<br>Will Go Here</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- About -->
+
+        <section id="about">
+
+            <div class="container">
+
+                <h2 class="section-title">About Me</h2>
+
+                <div class="section-line"></div>
+
+                <p class="section-text">
+                    I am a graduate researcher in Electrical Engineering at
+                    Washington State University Vancouver. My research focuses
+                    on RF, microwave, and antenna engineering, with particular
+                    interest in circularly polarized antennas, MIMO systems,
+                    full-duplex communication, and emerging mmWave and
+                    terahertz technologies.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Research -->
+
+        <section id="research">
+
+            <div class="container">
+
+                <h2 class="section-title">Research Interests</h2>
+
+                <div class="section-line"></div>
+
+                <div class="research-grid">
+
+                    <div class="research-card">
+                        <h3>Antenna Design</h3>
+                        <p>
+                            Design, simulation, fabrication, and measurement
+                            of advanced antenna structures.
+                        </p>
+                    </div>
+
+                    <div class="research-card">
+                        <h3>Circular Polarization</h3>
+                        <p>
+                            Wideband circularly polarized antennas and
+                            polarization control techniques.
+                        </p>
+                    </div>
+
+                    <div class="research-card">
+                        <h3>MIMO Antennas</h3>
+                        <p>
+                            Multi-port antenna systems, isolation enhancement,
+                            and MIMO performance optimization.
+                        </p>
+                    </div>
+
+                    <div class="research-card">
+                        <h3>Full-Duplex Communication</h3>
+                        <p>
+                            Antenna technologies for simultaneous transmit
+                            and receive wireless communication.
+                        </p>
+                    </div>
+
+                    <div class="research-card">
+                        <h3>RF & Microwave</h3>
+                        <p>
+                            RF systems, microwave engineering, measurement,
+                            and electromagnetic analysis.
+                        </p>
+                    </div>
+
+                    <div class="research-card">
+                        <h3>mmWave & THz</h3>
+                        <p>
+                            Antenna and electromagnetic technologies for
+                            millimeter-wave and terahertz applications.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Publications -->
+
+        <section id="publications">
+
+            <div class="container">
+
+                <h2 class="section-title">Selected Publications</h2>
+
+                <div class="section-line"></div>
+
+                <div class="publication">
+
+                    <h3>
+                        A Compact Wideband Circularly Polarized MIMO Antenna
+                        for High Data Rate Communications
+                    </h3>
+
+                    <p>
+                        S. Uddin et al. — 2026 National Radio Science Meeting
+                        (NRSM), 2026.
+                    </p>
+
+                </div>
+
+                <div class="publication">
+
+                    <h3>
+                        Publication Title
+                    </h3>
+
+                    <p>
+                        Additional publications will be added here.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Projects -->
+
+        <section id="projects">
+
+            <div class="container">
+
+                <h2 class="section-title">Research Projects</h2>
+
+                <div class="section-line"></div>
+
+                <p class="section-text">
+
+                    Current research projects and antenna prototypes will
+                    be presented here, including simulation results,
+                    fabricated prototypes, measurement results, radiation
+                    patterns, gain, efficiency, and S-parameters.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Contact -->
+
+        <section id="contact">
+
+            <div class="container">
+
+                <div class="contact-box">
+
+                    <h2>Let's Connect</h2>
+
+                    <p>
+                        I am interested in research collaboration,
+                        academic opportunities, and discussions related
+                        to RF, antennas, and wireless communication.
+                    </p>
+
+                    <div class="contact-links">
+
+                        <a href="#">
+                            Email
+                        </a>
+
+                        <a href="#">
+                            Google Scholar
+                        </a>
+
+                        <a href="#">
+                            LinkedIn
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        © 2026 Sharif Uddin. All rights reserved.
+
+    </footer>
 
 </body>
+
 </html>
