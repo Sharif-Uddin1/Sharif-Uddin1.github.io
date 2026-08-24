@@ -181,7 +181,20 @@
         /* Profile placeholder */
 
         /* Profile placeholder */
-      
+      .hero {
+    min-height: 570px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 80px 0;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 0;
+}
         
         .profile {
     width: 270px;
@@ -267,17 +280,19 @@
         }
 
 /* Teaching */
+/* Teaching Experience */
+
 .teaching-item {
     background: white;
     padding: 22px 25px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     border-left: 4px solid #2563eb;
     border-radius: 4px;
 }
 
 .teaching-item h3 {
     color: #0f2747;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .teaching-institution {
@@ -286,7 +301,29 @@
     margin-bottom: 10px;
 }
 
-.teaching-item p {
+.teaching-item > p {
+    color: #64748b;
+    margin-bottom: 18px;
+}
+
+.teaching-courses {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 12px;
+}
+
+.teaching-semester {
+    display: flex;
+    gap: 25px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.teaching-semester strong {
+    min-width: 100px;
+    color: #0f2747;
+}
+
+.teaching-semester span {
     color: #64748b;
 }
 
@@ -643,19 +680,49 @@
 
 
 
-        <div class="teaching-item">
+<div class="teaching-item">
 
-            <h3>Graduate Teaching Assistant, Department of Electrical & Electronic Engineering</h3>
+    <h3>
+        Graduate Teaching Assistant, Department of Electrical & Computer Engineering
+    </h3>
 
-            <p class="teaching-institution">
-                Washington State University Vancouver
-            </p>
+    <p class="teaching-institution">
+        Washington State University Vancouver
+    </p>
 
-            <p>
-                Evaluated and provided detailed feedback on homework and lab reports; facilitated lab sessions
-            </p>
+    <p>
+        Evaluated and provided detailed feedback on homework and lab reports;
+        facilitated laboratory sessions and supported students in course-related
+        activities.
+    </p>
 
+    <div class="teaching-courses">
+
+        <div class="teaching-semester">
+            <strong>Fall 2026</strong>
+            <span>Circuit Modeling and Analysis II / ECE 321</span>
+             <span>RF Devices and Circuits / ECE 425</span>
+             <span>Programming for Electrical Engineers / ECE 251</span>
         </div>
+
+        <div class="teaching-semester">
+            <strong>Spring 2026</strong>
+            <span>Antenna Design and Analysis / ECE 471</span>
+            <span>Introduction to Power and Energy Systems / ECE 311</span>
+             <span>Electromagnetic Fields and Waves / ECE 370</span>
+             
+        </div>
+
+        <div class="teaching-semester">
+            <strong>Fall 2025</strong>
+            <span>Principles of Solid State Devices / ECE 349</span>
+             <span>RF Devices and Circuits / ECE 425</span>
+             <span>Programming for Electrical Engineers / ECE 251</span>
+        </div>
+
+    </div>
+
+</div>
 
         <div class="teaching-item">
 
