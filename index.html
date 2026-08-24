@@ -330,7 +330,81 @@
     color: #64748b;
 }
 
+/* Current Research Projects */
 
+.projects-intro {
+    max-width: 850px;
+    font-size: 17px;
+    color: #475569;
+    margin-bottom: 30px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h3 {
+    color: #0f2747;
+    font-size: 21px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.project-status {
+    display: inline-block;
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.project-keywords {
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.project-link {
+    color: #0f2747;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    color: #2563eb;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
         
         /* Publications */
 
@@ -525,8 +599,9 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#research">Research</a></li>
-                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#publications">Publications</a></li>
+                 <li><a href="#teaching">Teaching</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <a href="CV_Sharif.pdf" class="cv-button" target="_blank">
@@ -678,95 +753,120 @@
 
         </section>
 
-
-
-        <!-- Teaching Experiences -->
-
-<section id="teaching">
+<section id="projects">
 
     <div class="container">
 
-        <h2 class="section-title">Teaching Experience</h2>
+        <h2 class="section-title">Current Research Projects</h2>
 
         <div class="section-line"></div>
 
+        <p class="projects-intro">
+            My current research focuses on the design, simulation, fabrication,
+            and experimental characterization of advanced RF and antenna systems
+            for next-generation wireless communications.
+        </p>
+
+        <div class="projects-grid">
+
+            <!-- Project 1 -->
+
+            <div class="project-card">
+
+                <h3>
+                    Differentially Fed Wideband Circularly Polarized
+                    Antenna for Full-Duplex Communication
+                </h3>
+
+                <span class="project-status">
+                    Current Research
+                </span>
+
+                <p>
+                    Developing a wideband circularly polarized antenna architecture
+                    for full-duplex wireless systems, with emphasis on differential
+                    feeding, polarization purity, and high isolation between
+                    transmitting and receiving channels.
+                </p>
+
+                <div class="project-keywords">
+                    <strong>Keywords:</strong>
+                    Circular Polarization · Full Duplex · Differential Feeding ·
+                    Antenna Isolation
+                </div>
+
+                <a href="#" class="project-link">
+                    View Project ↗
+                </a>
+
+            </div>
 
 
-<div class="teaching-item">
+            <!-- Project 2 -->
 
-    <h3>
-        Graduate Teaching Assistant, Department of Electrical & Computer Engineering (Fall 2025 - Present)
-    </h3>
+            <div class="project-card">
 
-    <p class="teaching-institution">
-        Washington State University Vancouver
-    </p>
+                <h3>
+                    Compact Circularly Polarized MIMO Antenna for
+                    High-Data-Rate Communications
+                </h3>
 
-    <p>
-        Evaluated and provided detailed feedback on homework and lab reports;
-        facilitated laboratory sessions and supported students in course-related
-        activities.
-    </p>
+                <span class="project-status">
+                    Published Research
+                </span>
 
-    <div class="teaching-courses">
+                <p>
+                    Investigating compact circularly polarized MIMO antenna
+                    architectures for high-data-rate wireless communications,
+                    with emphasis on isolation enhancement and experimentally
+                    validated antenna performance.
+                </p>
 
-        <div class="teaching-semester">
-            <strong>Fall 2026</strong>
-            <span>Circuit Modeling and Analysis II / ECE 321</span>
-             <span>RF Devices and Circuits / ECE 425</span>
-             <span>Programming for Electrical Engineers / ECE 251</span>
-        </div>
+                <div class="project-keywords">
+                    <strong>Keywords:</strong>
+                    MIMO · Circular Polarization · Isolation Enhancement ·
+                    High Data Rate
+                </div>
 
-        <div class="teaching-semester">
-            <strong>Spring 2026</strong>
-            <span>Antenna Design and Analysis / ECE 471</span>
-            <span>Introduction to Power and Energy Systems / ECE 311</span>
-             <span>Electromagnetic Fields and Waves / ECE 370</span>
-             
-        </div>
+                <a href="https://ieeexplore.ieee.org/abstract/document/11550840"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="project-link">
+                    View Publication ↗
+                </a>
 
-        <div class="teaching-semester">
-            <strong>Fall 2025</strong>
-            <span>Principles of Solid State Devices / ECE 349</span>
-             <span>RF Devices and Circuits / ECE 425</span>
-             <span>Programming for Electrical Engineers / ECE 251</span>
-        </div>
+            </div>
 
-    </div>
 
-</div>
+            <!-- Project 3 -->
 
-        <div class="teaching-item">
+            <div class="project-card">
 
-            <h3>Lecturer, Department of Electrical & Electronic Engineering (2023-2025)</h3>
+                <h3>
+                    RF/mmWave/THz Antenna Systems
+                </h3>
 
-            <p class="teaching-institution">
-                Northern University Bangladesh
-            </p>
+                <span class="project-status">
+                    Research Direction
+                </span>
 
-            <p>
-                Taught undergraduate courses in electrical and electronic
-                engineering, supervised student projects and theses, and
-                supported laboratory-based instruction and academic activities.
-            </p>
+                <p>
+                    Exploring antenna architectures and electromagnetic structures
+                    for high-frequency wireless communication systems, with
+                    interest in mmWave and terahertz technologies, high-gain
+                    structures, and potential RF front-end integration.
+                </p>
 
-        </div>
+                <div class="project-keywords">
+                    <strong>Keywords:</strong>
+                    RF · mmWave · THz · High-Gain Antennas · RF Front-End
+                </div>
 
-        <div class="teaching-item">
+                <a href="#" class="project-link">
+                    Research Direction ↗
+                </a>
 
-            <h3>Lecturer, Department of Electrical & Electronic Engineering (2021-2023)</h3>
-
-            <p class="teaching-institution">
-                Prime University 
-            </p>
-
-            
-
-            <p>
-                Contributed to undergraduate teaching, laboratory instruction,
-                student mentoring, and academic activities in electrical and
-                electronic engineering.
-            </p>
+            </div>
 
         </div>
 
@@ -774,6 +874,7 @@
 
 </section>
 
+       
         
 
         <!-- Publications -->
@@ -864,6 +965,99 @@
                 </p>
 
             </div>
+
+        </div>
+
+    </div>
+
+</section>
+ <!-- Teaching Experiences -->
+
+<section id="teaching">
+
+    <div class="container">
+
+        <h2 class="section-title">Teaching Experience</h2>
+
+        <div class="section-line"></div>
+
+
+
+<div class="teaching-item">
+
+    <h3>
+        Graduate Teaching Assistant, Department of Electrical & Computer Engineering (Fall 2025 - Present)
+    </h3>
+
+    <p class="teaching-institution">
+        Washington State University Vancouver
+    </p>
+
+    <p>
+        Evaluated and provided detailed feedback on homework and lab reports;
+        facilitated laboratory sessions and supported students in course-related
+        activities.
+    </p>
+
+    <div class="teaching-courses">
+
+        <div class="teaching-semester">
+            <strong>Fall 2026</strong>
+            <span>Circuit Modeling and Analysis II / ECE 321</span>
+             <span>RF Devices and Circuits / ECE 425</span>
+             <span>Programming for Electrical Engineers / ECE 251</span>
+        </div>
+
+        <div class="teaching-semester">
+            <strong>Spring 2026</strong>
+            <span>Antenna Design and Analysis / ECE 471</span>
+            <span>Introduction to Power and Energy Systems / ECE 311</span>
+             <span>Electromagnetic Fields and Waves / ECE 370</span>
+             
+        </div>
+
+        <div class="teaching-semester">
+            <strong>Fall 2025</strong>
+            <span>Principles of Solid State Devices / ECE 349</span>
+             <span>RF Devices and Circuits / ECE 425</span>
+             <span>Programming for Electrical Engineers / ECE 251</span>
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="teaching-item">
+
+            <h3>Lecturer, Department of Electrical & Electronic Engineering (2023-2025)</h3>
+
+            <p class="teaching-institution">
+                Northern University Bangladesh
+            </p>
+
+            <p>
+                Taught undergraduate courses in electrical and electronic
+                engineering, supervised student projects and theses, and
+                supported laboratory-based instruction and academic activities.
+            </p>
+
+        </div>
+
+        <div class="teaching-item">
+
+            <h3>Lecturer, Department of Electrical & Electronic Engineering (2021-2023)</h3>
+
+            <p class="teaching-institution">
+                Prime University 
+            </p>
+
+            
+
+            <p>
+                Contributed to undergraduate teaching, laboratory instruction,
+                student mentoring, and academic activities in electrical and
+                electronic engineering.
+            </p>
 
         </div>
 
